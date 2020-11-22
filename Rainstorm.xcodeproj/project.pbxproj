@@ -17,7 +17,7 @@
 		5D83B2882568698A000D9679 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2872568698A000D9679 /* WeekViewController.swift */; };
 		5D83B28D25687226000D9679 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B28C25687226000D9679 /* UIViewController.swift */; };
 		5D83B290256872ED000D9679 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B28F256872ED000D9679 /* UIStoryboard.swift */; };
-		5D83B2952569E5C7000D9679 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2942569E5C7000D9679 /* APIKey.swift */; };
+		5D83B2992569EC3D000D9679 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2982569EC3D000D9679 /* APIKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		5D83B2872568698A000D9679 /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		5D83B28C25687226000D9679 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5D83B28F256872ED000D9679 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
-		5D83B2942569E5C7000D9679 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		5D83B2982569EC3D000D9679 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 		5D83B2932569E5AB000D9679 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5D83B2942569E5C7000D9679 /* APIKey.swift */,
+				5D83B2982569EC3D000D9679 /* APIKeys.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			files = (
 				5D83B2882568698A000D9679 /* WeekViewController.swift in Sources */,
 				5D83B2622568639E000D9679 /* RootViewController.swift in Sources */,
-				5D83B2952569E5C7000D9679 /* APIKey.swift in Sources */,
+				5D83B2992569EC3D000D9679 /* APIKeys.swift in Sources */,
 				5D83B28D25687226000D9679 /* UIViewController.swift in Sources */,
 				5D83B25E2568639E000D9679 /* AppDelegate.swift in Sources */,
 				5D83B2602568639E000D9679 /* SceneDelegate.swift in Sources */,

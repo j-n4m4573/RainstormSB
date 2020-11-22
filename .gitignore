@@ -4,7 +4,7 @@
 
 
 # DarkSky API secret
-Utilities/APIKey.swift
+APIKeys.swift
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
