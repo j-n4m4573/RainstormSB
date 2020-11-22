@@ -62,6 +62,13 @@ final class RootViewController: UIViewController {
         dayViewController.didMove(toParent: self)
         weekViewController.didMove(toParent: self)
     }
+    
+    private func fetchWeatherData() {
+        guard let baseUrl = URL(string: "https://api.darksky.net/forecast/") else {
+            return
+        }
+        let authenticatedBaseUrl = baseUrl.appendingPathComponent(<#T##pathComponent: String##String#>)
+    }
 }
 
 extension RootViewController {
