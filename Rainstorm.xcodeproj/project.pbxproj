@@ -18,6 +18,8 @@
 		5D83B28D25687226000D9679 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B28C25687226000D9679 /* UIViewController.swift */; };
 		5D83B290256872ED000D9679 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B28F256872ED000D9679 /* UIStoryboard.swift */; };
 		5D83B2992569EC3D000D9679 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2982569EC3D000D9679 /* APIKeys.swift */; };
+		5D83B29E256B1D08000D9679 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B29D256B1D08000D9679 /* WeatherRequest.swift */; };
+		5D83B2A2256B204F000D9679 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2A1256B204F000D9679 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5D83B28C25687226000D9679 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5D83B28F256872ED000D9679 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		5D83B2982569EC3D000D9679 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		5D83B29D256B1D08000D9679 /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		5D83B2A1256B204F000D9679 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		5D83B25C2568639E000D9679 /* Rainstorm */ = {
 			isa = PBXGroup;
 			children = (
+				5D83B2A0256B2022000D9679 /* Configuration */,
+				5D83B29C256B1CE7000D9679 /* Models */,
 				5D83B2932569E5AB000D9679 /* Utilities */,
 				5D83B272256863BE000D9679 /* Application Delegates */,
 				5D83B28B25687200000D9679 /* Extensions */,
@@ -170,6 +176,22 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		5D83B29C256B1CE7000D9679 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B29D256B1D08000D9679 /* WeatherRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D83B2A0256B2022000D9679 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5D83B2A1256B204F000D9679 /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +268,8 @@
 				5D83B28D25687226000D9679 /* UIViewController.swift in Sources */,
 				5D83B25E2568639E000D9679 /* AppDelegate.swift in Sources */,
 				5D83B2602568639E000D9679 /* SceneDelegate.swift in Sources */,
+				5D83B2A2256B204F000D9679 /* Configuration.swift in Sources */,
+				5D83B29E256B1D08000D9679 /* WeatherRequest.swift in Sources */,
 				5D83B284256868BC000D9679 /* DayViewController.swift in Sources */,
 				5D83B290256872ED000D9679 /* UIStoryboard.swift in Sources */,
 			);

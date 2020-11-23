@@ -40,6 +40,7 @@ final class RootViewController: UIViewController {
         
         // setup child view controllers
         setupChildViewControllers()
+        fetchWeatherData()
     }
 
     private func setupChildViewControllers() {
@@ -64,20 +65,17 @@ final class RootViewController: UIViewController {
     }
     
     private func fetchWeatherData() {
-        guard let baseUrl = URL(string: "https://api.darksky.net/forecast/") else {
-            return
-        }
-        let authenticatedBaseUrl = baseUrl.appendingPathComponent(APIKeys.dw)
-        let url = authenticatedBaseUrl.appendingPathComponent("\(37.7576171), \(-122.5776844)")
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("Request failed: \(error)")
-            } else if let response = response {
-                print(response)
-            }
+        let weatherRequest = WeatherRequest(baseURL: WeatherService.authenticatedBaseURL, location: Defaults.location)
+                
+        URLSession.shared.dataTask(with: weatherRequest.url) { (data, response, error) in
+                if let error = error {
+                    print("Request failed: \(error)")
+                } else if let response = response {
+                    print(response)
+                }
+            }.resume()
         }
-    }
 }
 
 extension RootViewController {
