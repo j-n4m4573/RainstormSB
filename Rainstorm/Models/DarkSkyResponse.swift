@@ -7,33 +7,50 @@
 
 import Foundation
 
-public struct DarkSkyResponse: Codable {
+struct DarkSkyResponse: Codable {
     
-    public struct Conditions: Codable {
-        public let time: Date
-        public let icon: String
-        public let summary: String
-        public let windSpeed: Double
-        public let temperature: Double
+  struct Conditions: Codable {
+      let time: Date
+      let icon: String
+      let summary: String
+      let windSpeed: Double
+      let temperature: Double
     
-    }
+  }
     
-    public struct Daily: Codable {
-        public let data: [Conditions]
-        public struct Conditions: Codable {
-            public let time: Date
-            public let icon: String
-            public let summary: String
-            public let windSpeed: Double
-            public let temperatureMin: Double
-            public let temperatureMax: Double
+  struct Daily: Codable {
+      let data: [Conditions]
+      struct Conditions: Codable {
+          let time: Date
+          let icon: String
+          let summary: String
+          let windSpeed: Double
+          let temperatureMin: Double
+          let temperatureMax: Double
 
-        }
+     }
+  }
+    let latitude: Double
+    let longitude: Double
+    let currently: Conditions
+    let daily: Daily
+
+}
+
+extension DarkSkyResponse: WeatherData {
+    var current: CurrentWeatherConditions {
+        return currently
     }
     
-    public let currently: Conditions
-    public let daily: Daily
+    var forecast: [ForecastWeatherConditions] {
+        return daily.data
+    }
+}
+
+extension DarkSkyResponse.Conditions: CurrentWeatherConditions {
     
-    public let latitude: Double
-    public let longitude: Double
+}
+
+extension DarkSkyResponse.Daily.Conditions: ForecastWeatherConditions {
+    
 }

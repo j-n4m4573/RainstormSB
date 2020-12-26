@@ -9,10 +9,15 @@ import UIKit
 
 final class RootViewController: UIViewController {
     
+    enum AlertType {
+        case noWeatherDataAvailable
+    }
+    
     // MARK: Properties
     
     var viewModel: RootViewModel? {
         didSet {
+            
             guard let viewModel = viewModel else {return}
             
             setupViewModel(with: viewModel)
@@ -62,7 +67,7 @@ final class RootViewController: UIViewController {
         dayViewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         dayViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         dayViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        dayViewController.view.heightAnchor.constraint(equalToConstant: Layout.dayView.height).isActive = true
+        
         
         weekViewController.view.topAnchor.constraint(equalTo: dayViewController.view.bottomAnchor).isActive = true
         weekViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -74,23 +79,45 @@ final class RootViewController: UIViewController {
     }
     
     private func setupViewModel(with viewModel: RootViewModel) {
-        viewModel.didFetchWeatherData = { (data, error) in
-            if let error = error {
-                print("Unable to fetch weather data \(error)")
-            } else if let data = data {
-                print(data)
+        viewModel.didFetchWeatherData = { [weak self] (weatherData, error) in
+            if let _ = error {
+                self?.presentAlert(of: .noWeatherDataAvailable)
+            } else if let weatherData = weatherData as? DarkSkyResponse {
+                
+                let dayViewModel = DayViewModel(weatherData: weatherData.current)
+                self?.dayViewController.viewModel = dayViewModel
+                
+                let weekViewModel = WeekViewModel(weatherData: weatherData.forecast)
+                self?.weekViewController.viewModel = weekViewModel
+                
+            } else {
+                self?.presentAlert(of: .noWeatherDataAvailable)
             }
         }
     }
     
+    private func presentAlert(of alertType: AlertType) {
+        let title: String
+        let message: String
+        
+        switch alertType {
+        case .noWeatherDataAvailable:
+            title = "Unable to fetch weather data"
+            message = "The application is unable to fetch weather data, please make sure your device is connected"
+        }
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension RootViewController {
     
-    fileprivate enum Layout {
-        enum dayView {
-            static let height: CGFloat = 200.0
-        }
-    }
+
 }
 
