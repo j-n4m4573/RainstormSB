@@ -26,6 +26,7 @@
 		5D83B2C2257313C4000D9679 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2C1257313C4000D9679 /* DayViewModel.swift */; };
 		5D83B2C72573267E000D9679 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2C62573267E000D9679 /* WeekViewModel.swift */; };
 		5D847E0525914DA8004117CE /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D847E0425914DA8004117CE /* Styles.swift */; };
+		5D847E2E25983E6F004117CE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D847E2D25983E6F004117CE /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5D83B2C1257313C4000D9679 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		5D83B2C62573267E000D9679 /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
 		5D847E0425914DA8004117CE /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		5D847E2D25983E6F004117CE /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				5D83B28C25687226000D9679 /* UIViewController.swift */,
 				5D83B28F256872ED000D9679 /* UIStoryboard.swift */,
+				5D847E2D25983E6F004117CE /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				5D83B2C72573267E000D9679 /* WeekViewModel.swift in Sources */,
 				5D83B28D25687226000D9679 /* UIViewController.swift in Sources */,
 				5D83B2B8256EF771000D9679 /* DarkSkyResponse.swift in Sources */,
+				5D847E2E25983E6F004117CE /* UIImage.swift in Sources */,
 				5D83B25E2568639E000D9679 /* AppDelegate.swift in Sources */,
 				5D83B2602568639E000D9679 /* SceneDelegate.swift in Sources */,
 				5D83B2A2256B204F000D9679 /* Configuration.swift in Sources */,
