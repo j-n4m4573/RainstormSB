@@ -68,18 +68,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LQr-da-kUa">
+                                <rect key="frame" x="191" y="151" width="33" height="33"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZxI-ym-jCf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="si3-2c-CFZ" firstAttribute="top" secondItem="blg-QD-7nJ" secondAttribute="bottom" constant="20" id="3bK-QN-sqo"/>
-                            <constraint firstItem="8Uy-vH-3yP" firstAttribute="centerX" secondItem="vkJ-Mv-mGh" secondAttribute="centerX" id="8Rx-QR-7Nq"/>
+                            <constraint firstItem="8Uy-vH-3yP" firstAttribute="centerX" secondItem="vkJ-Mv-mGh" secondAttribute="centerX" priority="250" id="8Rx-QR-7Nq"/>
                             <constraint firstItem="Rou-mY-4Tj" firstAttribute="centerX" secondItem="vkJ-Mv-mGh" secondAttribute="centerX" id="APF-HL-1Ki"/>
                             <constraint firstItem="1Rv-lR-Dca" firstAttribute="centerY" secondItem="si3-2c-CFZ" secondAttribute="centerY" id="NIC-WU-z66"/>
+                            <constraint firstItem="LQr-da-kUa" firstAttribute="centerX" secondItem="si3-2c-CFZ" secondAttribute="centerX" id="SLe-Hk-EYU"/>
                             <constraint firstItem="Rou-mY-4Tj" firstAttribute="top" secondItem="ZxI-ym-jCf" secondAttribute="top" constant="8" id="aDQ-cF-G7U"/>
                             <constraint firstItem="ZxI-ym-jCf" firstAttribute="trailing" secondItem="QR3-56-Xx0" secondAttribute="trailing" constant="16" id="dU3-QY-NMa"/>
                             <constraint firstItem="QR3-56-Xx0" firstAttribute="centerY" secondItem="si3-2c-CFZ" secondAttribute="centerY" id="dYE-uk-vjh"/>
                             <constraint firstItem="QR3-56-Xx0" firstAttribute="leading" secondItem="si3-2c-CFZ" secondAttribute="trailing" priority="250" constant="8" id="dqu-W5-XIa"/>
+                            <constraint firstItem="LQr-da-kUa" firstAttribute="centerY" secondItem="si3-2c-CFZ" secondAttribute="centerY" id="f5A-G6-X6D"/>
                             <constraint firstItem="1Rv-lR-Dca" firstAttribute="leading" secondItem="ZxI-ym-jCf" secondAttribute="leading" constant="16" id="goR-Xa-ena"/>
                             <constraint firstItem="blg-QD-7nJ" firstAttribute="centerX" secondItem="Rou-mY-4Tj" secondAttribute="centerX" id="uVc-sF-Twx"/>
                             <constraint firstItem="ZxI-ym-jCf" firstAttribute="bottom" secondItem="8Uy-vH-3yP" secondAttribute="bottom" priority="250" constant="20" id="vBU-19-ymX"/>
@@ -90,6 +95,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="LQr-da-kUa" id="EBp-xm-QXT"/>
                         <outlet property="dateLabel" destination="Rou-mY-4Tj" id="Qey-MU-Wa8"/>
                         <outlet property="descriptionLabel" destination="8Uy-vH-3yP" id="Fsf-Dj-KMk"/>
                         <outlet property="iconImageView" destination="si3-2c-CFZ" id="RdC-Tg-Fed"/>
@@ -100,11 +106,17 @@
                         <outletCollection property="regularLabels" destination="QR3-56-Xx0" collectionClass="NSMutableArray" id="vgm-A2-VCP"/>
                         <outletCollection property="smallLabels" destination="blg-QD-7nJ" collectionClass="NSMutableArray" id="x3s-qO-3RB"/>
                         <outletCollection property="smallLabels" destination="8Uy-vH-3yP" collectionClass="NSMutableArray" id="vPB-U7-bXP"/>
+                        <outletCollection property="weatherDataViews" destination="Rou-mY-4Tj" collectionClass="NSMutableArray" id="QtL-On-KBy"/>
+                        <outletCollection property="weatherDataViews" destination="QR3-56-Xx0" collectionClass="NSMutableArray" id="epI-xq-agj"/>
+                        <outletCollection property="weatherDataViews" destination="blg-QD-7nJ" collectionClass="NSMutableArray" id="cvJ-Da-2h3"/>
+                        <outletCollection property="weatherDataViews" destination="1Rv-lR-Dca" collectionClass="NSMutableArray" id="W7D-uu-HQR"/>
+                        <outletCollection property="weatherDataViews" destination="8Uy-vH-3yP" collectionClass="NSMutableArray" id="P6R-WS-tQs"/>
+                        <outletCollection property="weatherDataViews" destination="si3-2c-CFZ" collectionClass="NSMutableArray" id="QOR-k7-tWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC9-mV-6bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="72"/>
+            <point key="canvasLocation" x="847.82608695652175" y="71.651785714285708"/>
         </scene>
         <!--Week View Controller-->
         <scene sceneID="iRg-t9-PTc">

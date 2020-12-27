@@ -34,10 +34,12 @@ class RootViewModel {
             if let response = response as? HTTPURLResponse {
                 print("Status Code: \(response.statusCode)")
             }
+            DispatchQueue.main.async {
                 if let error = error {
                     self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
                 } else if let data = data {
                     let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .secondsSince1970
                         do {
                             let darkSkyResponse = try decoder.decode(DarkSkyResponse.self, from: data)
                             self?.didFetchWeatherData?(darkSkyResponse, nil)
@@ -48,6 +50,7 @@ class RootViewModel {
                 } else {
                     self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
                 }
-            }.resume()
-        }
+            }
+        }.resume()
+    }
 }
