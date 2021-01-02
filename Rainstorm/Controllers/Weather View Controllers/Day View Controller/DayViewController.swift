@@ -52,8 +52,10 @@ final class DayViewController: UIViewController {
     @IBOutlet var iconImageView: UIImageView! {
         didSet {
             iconImageView.contentMode = .scaleAspectFit
+            iconImageView.tintColor = .baseTintColor
         }
     }
+    
     @IBOutlet var regularLabels: [UILabel]! {
         didSet {
             for label in regularLabels {
@@ -84,7 +86,7 @@ final class DayViewController: UIViewController {
     
     private func setupView() {
         // Configure View
-        view.backgroundColor = .orange
+        view.backgroundColor = .lightBackgroundColor
     }
     
     // MARK: Helper Methods

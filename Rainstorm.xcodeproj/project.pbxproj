@@ -27,7 +27,20 @@
 		5D83B2C72573267E000D9679 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83B2C62573267E000D9679 /* WeekViewModel.swift */; };
 		5D847E0525914DA8004117CE /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D847E0425914DA8004117CE /* Styles.swift */; };
 		5D847E2E25983E6F004117CE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D847E2D25983E6F004117CE /* UIImage.swift */; };
+		5D847E4925995E80004117CE /* DayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D847E4825995E80004117CE /* DayViewModelTests.swift */; };
+		5D847E4E2599685A004117CE /* darksky.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D847E4D2599685A004117CE /* darksky.json */; };
+		5D847E53259968B6004117CE /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D847E52259968B6004117CE /* XCTestCase.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D847E39259947B6004117CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D83B2522568639E000D9679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D83B2592568639E000D9679;
+			remoteInfo = Rainstorm;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5D83B25A2568639E000D9679 /* Rainstorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainstorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,10 +65,22 @@
 		5D83B2C62573267E000D9679 /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
 		5D847E0425914DA8004117CE /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5D847E2D25983E6F004117CE /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		5D847E34259947B6004117CE /* RainstormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainstormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D847E38259947B6004117CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D847E4825995E80004117CE /* DayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModelTests.swift; sourceTree = "<group>"; };
+		5D847E4D2599685A004117CE /* darksky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darksky.json; sourceTree = "<group>"; };
+		5D847E52259968B6004117CE /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5D83B2572568639E000D9679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D847E31259947B6004117CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				5D83B25C2568639E000D9679 /* Rainstorm */,
+				5D847E35259947B6004117CE /* RainstormTests */,
 				5D83B25B2568639E000D9679 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				5D83B25A2568639E000D9679 /* Rainstorm.app */,
+				5D847E34259947B6004117CE /* RainstormTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +272,49 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		5D847E35259947B6004117CE /* RainstormTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D847E512599688C004117CE /* Extensions */,
+				5D847E4C25996843004117CE /* Stubs */,
+				5D847E4725994D37004117CE /* Test Cases */,
+				5D847E4225994C6E004117CE /* Supporting Files */,
+			);
+			path = RainstormTests;
+			sourceTree = "<group>";
+		};
+		5D847E4225994C6E004117CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D847E38259947B6004117CE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D847E4725994D37004117CE /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+				5D847E4825995E80004117CE /* DayViewModelTests.swift */,
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
+		5D847E4C25996843004117CE /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				5D847E4D2599685A004117CE /* darksky.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		5D847E512599688C004117CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D847E52259968B6004117CE /* XCTestCase.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,17 +335,40 @@
 			productReference = 5D83B25A2568639E000D9679 /* Rainstorm.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5D847E33259947B6004117CE /* RainstormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D847E3B259947B6004117CE /* Build configuration list for PBXNativeTarget "RainstormTests" */;
+			buildPhases = (
+				5D847E30259947B6004117CE /* Sources */,
+				5D847E31259947B6004117CE /* Frameworks */,
+				5D847E32259947B6004117CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D847E3A259947B6004117CE /* PBXTargetDependency */,
+			);
+			name = RainstormTests;
+			productName = RainstormTests;
+			productReference = 5D847E34259947B6004117CE /* RainstormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5D83B2522568639E000D9679 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					5D83B2592568639E000D9679 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					5D847E33259947B6004117CE = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+						TestTargetID = 5D83B2592568639E000D9679;
 					};
 				};
 			};
@@ -293,6 +386,7 @@
 			projectRoot = "";
 			targets = (
 				5D83B2592568639E000D9679 /* Rainstorm */,
+				5D847E33259947B6004117CE /* RainstormTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +399,14 @@
 				5D83B26A256863A1000D9679 /* LaunchScreen.storyboard in Resources */,
 				5D83B267256863A1000D9679 /* Assets.xcassets in Resources */,
 				5D83B2652568639E000D9679 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D847E32259947B6004117CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D847E4E2599685A004117CE /* darksky.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +437,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D847E30259947B6004117CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D847E53259968B6004117CE /* XCTestCase.swift in Sources */,
+				5D847E4925995E80004117CE /* DayViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D847E3A259947B6004117CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D83B2592568639E000D9679 /* Rainstorm */;
+			targetProxy = 5D847E39259947B6004117CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5D83B2632568639E000D9679 /* Main.storyboard */ = {
@@ -511,6 +630,51 @@
 			};
 			name = Release;
 		};
+		5D847E3C259947B6004117CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E46Z2WMWDA;
+				INFOPLIST_FILE = "RainstormTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BtrBrand.com.RainstormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rainstorm.app/Rainstorm";
+			};
+			name = Debug;
+		};
+		5D847E3D259947B6004117CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E46Z2WMWDA;
+				INFOPLIST_FILE = "RainstormTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BtrBrand.com.RainstormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rainstorm.app/Rainstorm";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,6 +692,15 @@
 			buildConfigurations = (
 				5D83B26F256863A1000D9679 /* Debug */,
 				5D83B270256863A1000D9679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D847E3B259947B6004117CE /* Build configuration list for PBXNativeTarget "RainstormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D847E3C259947B6004117CE /* Debug */,
+				5D847E3D259947B6004117CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
